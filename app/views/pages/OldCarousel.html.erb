@@ -1,0 +1,154 @@
+        <!-- Carousel -->
+        <div class="carousel-wrapper">
+            <div id="carousel" class="carousel">
+                <% 7.times do |i| %>
+                    <div class="carousel-item">
+                        <%= image_tag "horizontal-#{i + 1}.jpg", class: "carousel-image desktop-image" %>
+                        <%= image_tag "vertical-#{i + 1}.jpg", class: "carousel-image mobile-image" %>
+                    </div>
+                <% end %>
+            </div>
+            <button class="carousel-btn prev">&lt;</button>
+            <button class="carousel-btn next">&gt;</button>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="buttons-container">
+            <%= link_to "Contact Us", "http://localhost:3000/pages/home", class: "btn btn-contact" %>
+            <a href="https://wa.me/?text=Hello%20Andestellar" target="_blank" class="btn btn-whatsapp">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+        </div>
+
+<style>
+    .carousel-wrapper {
+        position: relative;
+        margin: 60px 0;
+        overflow: hidden;
+        border-radius: 8px;
+    }
+
+    .carousel {
+        display: flex;
+        transition: transform 0.5s ease;
+    }
+
+    .carousel-item {
+        min-width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .carousel-image {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .desktop-image {
+        display: block;
+    }
+
+    .mobile-image {
+        display: none;
+    }
+
+    .carousel-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(255, 255, 255, 0.3);
+        color: white;
+        border: none;
+        padding: 15px 20px;
+        font-size: 24px;
+        cursor: pointer;
+        border-radius: 4px;
+        transition: background 0.3s;
+        z-index: 3;
+    }
+
+    .carousel-btn:hover {
+        background: rgba(255, 255, 255, 0.5);
+    }
+
+    .carousel-btn.prev {
+        left: 20px;
+    }
+
+    .carousel-btn.next {
+        right: 20px;
+    }
+
+    .description {
+        text-align: center;
+        line-height: 1.6;
+        color: #d0d0d0;
+        margin: 60px 0;
+        font-size: 16px;
+    }
+
+    .buttons-container {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 60px;
+    }
+
+       /* Mobile Responsive */
+    @media (max-width: 768px) {
+        .title {
+            font-size: 36px;
+        }
+
+        .subtitle {
+            font-size: 16px;
+        }
+
+        .desktop-image {
+            display: none;
+        }
+
+        .mobile-image {
+            display: block;
+        }
+
+        .carousel-btn {
+            padding: 12px 15px;
+            font-size: 18px;
+        }
+
+        .description {
+            font-size: 14px;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            font-size: 14px;
+        }
+    }
+    </style>
+
+
+
+<script>
+    let currentSlide = 0;
+    const carousel = document.getElementById('carousel');
+    const items = document.querySelectorAll('.carousel-item');
+    const totalSlides = items.length;
+
+    function showSlide(n) {
+      carousel.style.transform = `translateX(-${n * 100}%)`;
+    }
+
+    document.querySelector('.carousel-btn.next').addEventListener('click', () => {
+      currentSlide = (currentSlide + 1) % totalSlides;
+      showSlide(currentSlide);
+    });
+
+    document.querySelector('.carousel-btn.prev').addEventListener('click', () => {
+      currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+      showSlide(currentSlide);
+    });
+</script>

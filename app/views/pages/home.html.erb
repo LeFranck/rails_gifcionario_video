@@ -129,6 +129,14 @@
       object-fit: contain;
       border-radius: 8px;
     }
+
+    .desktop-image {
+      display: block;
+    }
+
+    .mobile-image {
+      display: none;
+    }
     
     .carousel-placeholder {
       display: flex;
@@ -291,6 +299,14 @@
         width: 40px;
         height: 40px;
       }
+
+      .desktop-image {
+        display: none;
+      }
+
+      .mobile-image {
+        display: block;
+      }
       
       .carousel-image {
         max-height: 300px;
@@ -314,79 +330,40 @@
     <header class="pt-16 pb-12 px-4 text-center">
      <h1 id="site-title" class="title-text text-5xl md:text-7xl lg:text-8xl font-bold mb-4 animate-float animate-slide-in">Andestellar</h1>
      <p id="site-subtitle" class="subtitle-text text-sm md:text-base uppercase animate-slide-in delay-200">Andean Sky's magic</p>
-    </header><!-- Carousel Section -->
+    </header>
+    
+    <!-- Carousel Section -->
     <section class="px-4 md:px-8 lg:px-16 max-w-5xl mx-auto animate-slide-in delay-300">
      <div class="carousel-container">
       <div class="carousel-track" id="carousel-track">
        <!-- 7 Slides -->
-       <div class="carousel-slide">
-        <div class="carousel-placeholder w-full h-64 md:h-96">
-         <svg class="w-16 h-16 mb-4 text-amber-600 opacity-50" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-         </svg>
-         <p class="text-amber-600/70 body-text text-sm">horizontal-1 / vertical-1</p>
-        </div>
-       </div>
-       <div class="carousel-slide">
-        <div class="carousel-placeholder w-full h-64 md:h-96">
-         <svg class="w-16 h-16 mb-4 text-amber-600 opacity-50" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-         </svg>
-         <p class="text-amber-600/70 body-text text-sm">horizontal-2 / vertical-2</p>
-        </div>
-       </div>
-       <div class="carousel-slide">
-        <div class="carousel-placeholder w-full h-64 md:h-96">
-         <svg class="w-16 h-16 mb-4 text-amber-600 opacity-50" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-         </svg>
-         <p class="text-amber-600/70 body-text text-sm">horizontal-3 / vertical-3</p>
-        </div>
-       </div>
-       <div class="carousel-slide">
-        <div class="carousel-placeholder w-full h-64 md:h-96">
-         <svg class="w-16 h-16 mb-4 text-amber-600 opacity-50" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-         </svg>
-         <p class="text-amber-600/70 body-text text-sm">horizontal-4 / vertical-4</p>
-        </div>
-       </div>
-       <div class="carousel-slide">
-        <div class="carousel-placeholder w-full h-64 md:h-96">
-         <svg class="w-16 h-16 mb-4 text-amber-600 opacity-50" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-         </svg>
-         <p class="text-amber-600/70 body-text text-sm">horizontal-5 / vertical-5</p>
-        </div>
-       </div>
-       <div class="carousel-slide">
-        <div class="carousel-placeholder w-full h-64 md:h-96">
-         <svg class="w-16 h-16 mb-4 text-amber-600 opacity-50" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-         </svg>
-         <p class="text-amber-600/70 body-text text-sm">horizontal-6 / vertical-6</p>
-        </div>
-       </div>
-       <div class="carousel-slide">
-        <div class="carousel-placeholder w-full h-64 md:h-96">
-         <svg class="w-16 h-16 mb-4 text-amber-600 opacity-50" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-         </svg>
-         <p class="text-amber-600/70 body-text text-sm">horizontal-7 / vertical-7</p>
-        </div>
-       </div>
-      </div><!-- Navigation Buttons --> <button class="carousel-btn prev" id="prev-btn" aria-label="Previous slide">
+       <% 7.times do |i| %>
+         <div class="carousel-slide">
+          <div class="carousel-image relative">
+            <%= image_tag "horizontal-#{i + 1}.jpg", class: "carousel-image desktop-image" %>
+            <%= image_tag "vertical-#{i + 1}.jpg", class: "carousel-image mobile-image" %>
+          </div>
+         </div>
+       <% end %>
+
+
+      </div>
+      <!-- Navigation Buttons --> <button class="carousel-btn prev" id="prev-btn" aria-label="Previous slide">
        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
        </svg></button> <button class="carousel-btn next" id="next-btn" aria-label="Next slide">
        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
        </svg></button>
-     </div><!-- Carousel Dots -->
+     </div>
+     <!-- Carousel Dots -->
      <div class="carousel-dots" id="carousel-dots">
       <button class="carousel-dot active" data-index="0" aria-label="Go to slide 1"></button> <button class="carousel-dot" data-index="1" aria-label="Go to slide 2"></button> <button class="carousel-dot" data-index="2" aria-label="Go to slide 3"></button> <button class="carousel-dot" data-index="3" aria-label="Go to slide 4"></button> <button class="carousel-dot" data-index="4" aria-label="Go to slide 5"></button> <button class="carousel-dot" data-index="5" aria-label="Go to slide 6"></button> <button class="carousel-dot" data-index="6" aria-label="Go to slide 7"></button>
      </div>
-    </section><!-- Description Section -->
+    </section>
+    
+    
+    <!-- Description Section -->
     <section class="px-4 md:px-8 lg:px-16 max-w-3xl mx-auto mt-12 animate-slide-in delay-400">
      <p id="paragraph-text" class="body-text text-gray-300 text-center text-base md:text-lg leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
     </section><!-- CTA Buttons -->
