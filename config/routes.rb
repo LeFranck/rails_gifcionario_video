@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :posts
-  get "pages/home", to: "pages#home"
-  get "pages/contact", to: "pages#contact"
+  # get "pages/home", to: "pages#home"
+  get "contact", to: "pages#contact"
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
@@ -14,5 +14,5 @@ Rails.application.routes.draw do
   # get "service-worker" => "rails/pwa#service_worker", as: :pwa_service_worker
 
   # Defines the root path route ("/")
-  root "posts#index"
+  root "pages#home"
 end
